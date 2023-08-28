@@ -1,0 +1,120 @@
+{
+  "config": "{\"version\":\"5.47\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU08\",\"version\":\"5.47\",\"type\":2}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "publicCustomVisuals": [
+    "ChicletSlicer1448559807354"
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU08",
+            "path": "BaseThemes/CY23SU08.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"280L\"}}}}}]}}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"166846cf6a8b7d7a46f1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":84.23645320197045,\"y\":0,\"z\":1000,\"width\":268.66995073891627,\"height\":66.50246305418719,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"ChicletSlicer1448559807354\",\"projections\":{\"Category\":[{\"queryRef\":\"ORGAS.ANNEE\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"ORGAS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ANNEE\"},\"Name\":\"ORGAS.ANNEE\",\"NativeReferenceName\":\"ANNEE\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"ORGAS\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ANNEE\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2017L\"}}]]}}}]}},\"multiselect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 66.50,
+          "width": 268.67,
+          "x": 84.24,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"664b93a8388f2f3d1f3f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":411.42857142857144,\"y\":0,\"z\":2000,\"width\":457.53694581280786,\"height\":66.50246305418719,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"ChicletSlicer1448559807354\",\"projections\":{\"Category\":[{\"queryRef\":\"ORGAS.BRANCHE\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"ORGAS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"BRANCHE\"},\"Name\":\"ORGAS.BRANCHE\",\"NativeReferenceName\":\"BRANCHE\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"columns\":{\"expr\":{\"Literal\":{\"Value\":\"6D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 66.50,
+          "width": 457.54,
+          "x": 411.43,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"6aa603ed914f8588e0e7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":555.0738916256157,\"y\":89.55665024630542,\"z\":3000,\"width\":593.2019704433498,\"height\":243.8423645320197,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"ORGAS.ANNEE\",\"active\":true},{\"queryRef\":\"ORGAS.CATEG_OCCUPATION_ORGA\",\"active\":true},{\"queryRef\":\"ORGAS.FK_ORG\",\"active\":true},{\"queryRef\":\"ORGAS.ORGA_CODERAP\"}],\"Columns\":[{\"queryRef\":\"ORGAS.BRANCHE\",\"active\":true}],\"Values\":[{\"queryRef\":\"CountNonNull(ORGAS.IMPL_CODERAP)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"ORGAS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ANNEE\"},\"Name\":\"ORGAS.ANNEE\",\"NativeReferenceName\":\"ANNEE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"CATEG_OCCUPATION_ORGA\"},\"Name\":\"ORGAS.CATEG_OCCUPATION_ORGA\",\"NativeReferenceName\":\"CATEG_OCCUPATION_ORGA\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"FK_ORG\"},\"Name\":\"ORGAS.FK_ORG\",\"NativeReferenceName\":\"FK_ORG\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ORGA_CODERAP\"},\"Name\":\"ORGAS.ORGA_CODERAP\",\"NativeReferenceName\":\"ORGA_CODERAP\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"IMPL_CODERAP\"}},\"Function\":5},\"Name\":\"CountNonNull(ORGAS.IMPL_CODERAP)\",\"NativeReferenceName\":\"Nombre de IMPL_CODERAP\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"BRANCHE\"},\"Name\":\"ORGAS.BRANCHE\",\"NativeReferenceName\":\"BRANCHE\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ANNEE\"}}}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"ORGAS.ANNEE\"],\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ORGAS\"}},\"Property\":\"ANNEE\"}}],\"isPinned\":true},{\"queryRefs\":[\"ORGAS.CATEG_OCCUPATION_ORGA\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ORGAS\"}},\"Property\":\"CATEG_OCCUPATION_ORGA\"}}],\"isPinned\":true},{\"queryRefs\":[\"ORGAS.FK_ORG\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ORGAS\"}},\"Property\":\"FK_ORG\"}}],\"isPinned\":true},{\"queryRefs\":[\"ORGAS.ORGA_CODERAP\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"2017L\"}}],\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Occupant gracieux'\"}}],\"isToggled\":true}]}]}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"107.14779078528615D\"}}}},\"selector\":{\"metadata\":\"ORGAS.FK_ORG\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'ORGANISMES'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 243.84,
+          "width": 593.20,
+          "x": 555.07,
+          "y": 89.56,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"d7784c4ffcb6e0f1068e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":93.99014778325123,\"y\":89.55665024630542,\"z\":0,\"width\":435.3694581280788,\"height\":243.8423645320197,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ORGAS.BRANCHE\",\"active\":true}],\"Y\":[{\"queryRef\":\"Count(RIOSS.IMPL_CODERAP)\"},{\"queryRef\":\"CountNonNull(PERLS.IMPL_CODERAP)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"ORGAS\",\"Type\":0},{\"Name\":\"r\",\"Entity\":\"RIOSS\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"PERLS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"BRANCHE\"},\"Name\":\"ORGAS.BRANCHE\",\"NativeReferenceName\":\"branche\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"IMPL_CODERAP\"}},\"Function\":2},\"Name\":\"Count(RIOSS.IMPL_CODERAP)\",\"NativeReferenceName\":\"Imp_R1\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"IMPL_CODERAP\"}},\"Function\":5},\"Name\":\"CountNonNull(PERLS.IMPL_CODERAP)\",\"NativeReferenceName\":\"Imp_P1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"IMPL_CODERAP\"}},\"Function\":2}}}]},\"columnProperties\":{\"Min(RIOSS.IMPL_CODERAP)\":{\"displayName\":\"Imp_R\"},\"Min(PERLS.IMPL_CODERAP)\":{\"displayName\":\"Imp_P\"},\"Count(RIOSS.IMPL_CODERAP)\":{\"displayName\":\"Imp_R\"},\"CountNonNull(PERLS.IMPL_CODERAP)\":{\"displayName\":\"Imp_P\"},\"ORGAS.BRANCHE\":{\"displayName\":\"branche\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"legend\":[{\"properties\":{\"showGradientLegend\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#DCD3F2'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 243.84,
+          "width": 435.37,
+          "x": 93.99,
+          "y": 89.56,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"dfc60f22ddd81de83398\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1162.463054187192,\"y\":0,\"z\":6000,\"width\":117.93103448275862,\"height\":170.2463054187192,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"ORGAS.IMPL_CODERAP\"},{\"queryRef\":\"RIOSS.IMPL_CODERAP\"},{\"queryRef\":\"PERLS.IMPL_CODERAP\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"ORGAS\",\"Type\":0},{\"Name\":\"r\",\"Entity\":\"RIOSS\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"PERLS\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"IMPL_CODERAP\"}},\"Function\":5},\"Name\":\"ORGAS.IMPL_CODERAP\",\"NativeReferenceName\":\"Imp_O\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"IMPL_CODERAP\"}},\"Function\":5},\"Name\":\"RIOSS.IMPL_CODERAP\",\"NativeReferenceName\":\"Nombre de IMPL_CODERAP\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"IMPL_CODERAP\"}},\"Function\":5},\"Name\":\"PERLS.IMPL_CODERAP\",\"NativeReferenceName\":\"Nombre de IMPL_CODERAP1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"IMPL_CODERAP\"}},\"Function\":5}}}]},\"columnProperties\":{\"ORGAS.IMPL_CODERAP\":{\"displayName\":\"Imp_O\"},\"RIOSS.IMPL_CODERAP\":{\"displayName\":\"Imp_R\"},\"PERLS.IMPL_CODERAP\":{\"displayName\":\"Imp_P\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":0.6}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"82D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"6D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":5,\"Percent\":0}}}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 170.25,
+          "width": 117.93,
+          "x": 1162.46,
+          "y": 0.00,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"f0f82a961db146df5abe\",\"layouts\":[{\"id\":0,\"position\":{\"x\":93.99014778325123,\"y\":518.7192118226601,\"z\":5000,\"width\":1054.2857142857142,\"height\":149.85221674876848,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"ORGAS.ORGA_CODERAP\",\"active\":true},{\"queryRef\":\"PERLS.BAT_CODERAP\",\"active\":true}],\"Values\":[{\"queryRef\":\"Sum(PERLS.CONSO_ANN_ELEC_KLW_COR)\"},{\"queryRef\":\"Sum(PERLS.CONSO_ANN_FIOUL_KLW_COR)\"},{\"queryRef\":\"Sum(PERLS.CONSO_ANN_GAZ_KLW_COR)\"}],\"Columns\":[{\"queryRef\":\"PERLS.CATEG_EXPLOIT\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"PERLS\",\"Type\":0},{\"Name\":\"o\",\"Entity\":\"ORGAS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"BAT_CODERAP\"},\"Name\":\"PERLS.BAT_CODERAP\",\"NativeReferenceName\":\"BAT_CODERAP\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ORGA_CODERAP\"},\"Name\":\"ORGAS.ORGA_CODERAP\",\"NativeReferenceName\":\"ORGA_CODERAP1\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CONSO_ANN_ELEC_KLW_COR\"}},\"Function\":0},\"Name\":\"Sum(PERLS.CONSO_ANN_ELEC_KLW_COR)\",\"NativeReferenceName\":\"Somme de CONSO_ANN_ELEC_KLW_COR\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CONSO_ANN_FIOUL_KLW_COR\"}},\"Function\":0},\"Name\":\"Sum(PERLS.CONSO_ANN_FIOUL_KLW_COR)\",\"NativeReferenceName\":\"Somme de CONSO_ANN_FIOUL_KLW_COR\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CONSO_ANN_GAZ_KLW_COR\"}},\"Function\":0},\"Name\":\"Sum(PERLS.CONSO_ANN_GAZ_KLW_COR)\",\"NativeReferenceName\":\"Somme de CONSO_ANN_GAZ_KLW_COR\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"CATEG_EXPLOIT\"},\"Name\":\"PERLS.CATEG_EXPLOIT\",\"NativeReferenceName\":\"CATEG_EXPLOIT\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"ORGAS.ORGA_CODERAP\"],\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ORGAS\"}},\"Property\":\"ORGA_CODERAP\"}}],\"isPinned\":true},{\"queryRefs\":[\"PERLS.BAT_CODERAP\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"columnProperties\":{\"Sum(PERLS.CONSO_ANN_ELEC_KLW_COR)\":{\"displayName\":\"ELEC\"},\"Sum(PERLS.CONSO_ANN_FIOUL_KLW_COR)\":{\"displayName\":\"FIOUL\"},\"Sum(PERLS.CONSO_ANN_GAZ_KLW_COR)\":{\"displayName\":\"GAZ\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"206.71428195537058D\"}}}},\"selector\":{\"metadata\":\"ORGAS.BRANCHE_LIBELLE\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"107.14779078528615D\"}}}},\"selector\":{\"metadata\":\"ORGAS.FK_ORG\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'PERLS'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 149.85,
+          "width": 1054.29,
+          "x": 93.99,
+          "y": 518.72,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"f41a5d901237f52541e3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":93.99014778325123,\"y\":350.2463054187192,\"z\":4000,\"width\":1054.2857142857142,\"height\":149.85221674876848,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"ORGAS.ORGA_CODERAP\",\"active\":true},{\"queryRef\":\"RIOSS.SITE_LIBELLE\",\"active\":true},{\"queryRef\":\"RIOSS.BAT_LIBELLE\",\"active\":true}],\"Columns\":[{\"queryRef\":\"RIOSS.IMPL_TYPE_EXPLOIT\",\"active\":true}],\"Values\":[{\"queryRef\":\"Min(RIOSS.IMPL_CODERAP)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"r\",\"Entity\":\"RIOSS\",\"Type\":0},{\"Name\":\"o\",\"Entity\":\"ORGAS\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"BAT_LIBELLE\"},\"Name\":\"RIOSS.BAT_LIBELLE\",\"NativeReferenceName\":\"BAT_LIBELLE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"SITE_LIBELLE\"},\"Name\":\"RIOSS.SITE_LIBELLE\",\"NativeReferenceName\":\"SITE_LIBELLE\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"IMPL_CODERAP\"}},\"Function\":5},\"Name\":\"Min(RIOSS.IMPL_CODERAP)\",\"NativeReferenceName\":\"Nombre de IMPL_CODERAP\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"r\"}},\"Property\":\"IMPL_TYPE_EXPLOIT\"},\"Name\":\"RIOSS.IMPL_TYPE_EXPLOIT\",\"NativeReferenceName\":\"IMPL_TYPE_EXPLOIT\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"ORGA_CODERAP\"},\"Name\":\"ORGAS.ORGA_CODERAP\",\"NativeReferenceName\":\"ORGA_CODERAP\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"ORGAS.ORGA_CODERAP\"],\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"ORGAS\"}},\"Property\":\"ORGA_CODERAP\"}}],\"isPinned\":true},{\"queryRefs\":[\"RIOSS.SITE_LIBELLE\"],\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"RIOSS\"}},\"Property\":\"SITE_LIBELLE\"}}],\"isPinned\":true},{\"queryRefs\":[\"RIOSS.BAT_LIBELLE\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"206.71428195537058D\"}}}},\"selector\":{\"metadata\":\"ORGAS.BRANCHE_LIBELLE\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"107.14779078528615D\"}}}},\"selector\":{\"metadata\":\"ORGAS.FK_ORG\"}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":2,\"Percent\":0.6}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'RIOSS'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 149.85,
+          "width": 1054.29,
+          "x": 93.99,
+          "y": 350.25,
+          "z": 4000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection0e8209bfabad4127e173",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"83ba0f07fea9d0350cdb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":440.7912561576354,\"y\":49.507389162561566,\"width\":300,\"height\":300,\"z\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"ORGAS.Mesure1\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"ORGAS\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Mesure1\"},\"Name\":\"ORGAS.Mesure1\",\"NativeReferenceName\":\"Mesure1\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Mesure1\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 300.00,
+          "width": 300.00,
+          "x": 440.79,
+          "y": 49.51,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
